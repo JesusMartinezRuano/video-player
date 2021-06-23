@@ -69,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # deploy-video-player
+After run <pre>npm run build</pre> copy just generated <em>build</em> folder contents to your <em>/var/www/html</em> edit your <em>/etc/nginx/sites-available/default</em>
+with: <pre> ... server_name 192.168.245.141; // or your name server </pre>
+Note: to change m3u8 streams in each search with visualStudio the text m3u8 in build/static/js directory the string 'main_dvr.m3u8"' and replace with the required
+
