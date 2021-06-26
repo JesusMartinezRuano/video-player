@@ -2,15 +2,20 @@ import React from 'react';
 import ReactHlsPlayer from 'react-hls-player';
 import SplitPane from 'react-split-pane';
 import './App.css';
-
+import {urls} from "./urls.js";
 
 
 function App() {
-  const url1 = "https://rtvelivestream.akamaized.net/tdp_main_dvr.m3u8";
-  const url2 = "https://rtvelivestream.akamaized.net/24h_main_dvr.m3u8";
+  //const url1 = "https://rtvelivestream.akamaized.net/tdp_main_dvr.m3u8";
+  //const url2 = "https://rtvelivestream.akamaized.net/24h_main_dvr.m3u8";
   const playerref = React.useRef();
   const playerref2 = React.useRef();
 
+  for (var i = 0; i < urls.length; i++)
+  {
+    var video = urls[i];
+    //console.log(`Name: ${video.url1}, ${video.url2}`); 
+  }
 
   
 
@@ -21,7 +26,7 @@ function App() {
         
         <div className='wrapper'>
         <ReactHlsPlayer playerRef={playerref}
-          src={url1}
+          src={video.url1}
           className='react-player'
           autoPlay={true}
           controls={true}       
@@ -30,7 +35,7 @@ function App() {
       </div>
       <div className='wrapper'>
         <ReactHlsPlayer playerRef2={playerref2}
-          src={url2}
+          src={video.url2}
           className='react-player'
           autoPlay={true}
           controls={true}
