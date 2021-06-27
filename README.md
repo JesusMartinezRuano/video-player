@@ -73,3 +73,4 @@ After run <pre>npm run build</pre> copy just generated <em>build</em> folder con
 with: <pre> ... server_name 192.168.245.141; // or your name server </pre>
 Note: the file /src/urls.js contains the m3u8 streams to show, you can edit on your own
 
+c
